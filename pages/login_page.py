@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
 
 
 class LoginPage:
@@ -13,46 +14,42 @@ class LoginPage:
         self.driver.get(base_url)
 
     def login_username(self, username):
-        username_input = self.wait.until(
+        self.wait.until(
             EC.visibility_of_element_located((By.ID, "userName"))
-        )
-        username_input.send_keys(username)
+        ).send_keys(username)
 
     def click_next_button(self):
-        next_button = self.wait.until(
+        self.wait.until(
             EC.element_to_be_clickable(
                 (By.XPATH, "//input[@value='Next']")
             )
-        )
-        next_button.click()
+        ).click()
 
     def login_password(self, password):
         password_input = self.wait.until(
-            EC.presence_of_element_located((By.ID, "password"))
+            EC.element_to_be_clickable((By.ID, "password"))
         )
 
-        self.wait.until(
-            lambda driver: password_input.is_displayed()
-        )
-
-        password_input.clear()
+        password_input.click()
         password_input.send_keys(password)
 
     def click_login_button(self):
-        login_button = self.wait.until(
+        self.wait.until(
             EC.element_to_be_clickable(
                 (By.XPATH, "//input[@value='Login']")
             )
-        )
-        login_button.click()
-        
+        ).click()
+
     def click_yes_button(self):
-        yes_button = self.wait.until(
-            EC.element_to_be_clickable(
-                (By.ID, "loginwarningactionbutton")
-            )
-        )
-        yes_button.click()
+        try:
+            WebDriverWait(self.driver, 5).until(
+                EC.element_to_be_clickable(
+                    (By.ID, "loginwarningactionbutton")
+                )
+            ).click()
+
+        except TimeoutException:
+            pass
 
     def login(self, username, password):
         self.login_username(username)

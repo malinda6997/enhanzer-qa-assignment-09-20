@@ -1,0 +1,42 @@
+[
+  {
+    "general": {
+      "title": "Mr.",
+      "name": "QA Test Employee",
+      "initials": "QTE",
+      "first_name": "QA",
+      "last_name": "Test Employee",
+      "address": "123 QA Test Street, Colombo",
+      "nic": "901234567V",
+      "email": "qatest.employee@example.com",
+      "mobile": "0771234567",
+      "phone": "0112345678",
+      "reference": "QA-REF-001",
+      "vehicle_no": "CAB-1234",
+      "employee_status": "Active",
+      "designation": "QA Engineer",
+      "epf_no": "EPF-TEST-001",
+      "date_of_joined": "01/01/2026",
+      "location": "Colombo",
+      "remark": "Created for Selenium automation testing",
+      "date_of_birth": "01/01/1995",
+      "bank_name": "Test Bank",
+      "bank_account": "1234567890",
+      "bank_code": "TEST001",
+      "employee_group": "Staff"
+    },
+
+    "social_media": {
+      "linkedin": "https://www.linkedin.com/in/qa-test-employee",
+      "facebook": "https://www.facebook.com/qa.test.employee",
+      "instagram": "https://www.instagram.com/qa.test.employee"
+    },
+
+    "contact": {
+      "name": "QA Emergency Contact",
+      "designation": "Manager",
+      "type": "Personal",
+      "description": "Emergency contact for QA test employee"
+    }
+  }
+]
