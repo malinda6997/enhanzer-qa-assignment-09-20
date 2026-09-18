@@ -23,7 +23,7 @@
       "bank_name": "Test Bank",
       "bank_account": "1234567890",
       "bank_code": "TEST001",
-      "employee_group": "Staff"
+      "employee_group": "Test-system"
     },
 
     "social_media": {
