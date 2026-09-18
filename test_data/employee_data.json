@@ -2,12 +2,12 @@
   {
     "general": {
       "title": "Mr.",
-      "name": "QA Test Employee",
+      "name": "QA Test Employee001",
       "initials": "QTE",
       "first_name": "QA",
       "last_name": "Test Employee",
       "address": "123 QA Test Street, Colombo",
-      "nic": "901234567V",
+      "nic": "992345678V",
       "email": "qatest.employee@example.com",
       "mobile": "0771234567",
       "phone": "0112345678",
@@ -35,8 +35,8 @@
     "contact": {
       "name": "QA Emergency Contact",
       "designation": "Manager",
-      "type": "Personal",
-      "description": "Emergency contact for QA test employee"
+      "type": "Mobile",
+      "description": "0786997398"
     }
   }
 ]
